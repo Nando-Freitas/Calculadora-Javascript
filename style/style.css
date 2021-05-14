@@ -1,0 +1,87 @@
+:root{
+    --cinza: #f2f2f2;
+    --branco: #ffffff;
+    --azul: #66ccff;
+}
+
+body{
+    margin: auto;
+    background-color: var(--azul);
+}
+
+.calculadora{
+    max-width: 40%;
+    margin: auto;
+    height: auto ;
+    display: block;
+    margin-top: 5%;
+    padding-top: 30px;
+    border-radius: 10px;
+    padding-bottom: 30px;
+    background-color: var(--cinza);
+}
+
+.display{
+    width: 90%;
+    height: 100px;
+    display: block;
+    margin-left: 5%;
+    margin-bottom: 10%;
+    border-radius: 10px;
+    background-color: var(--branco);
+}
+
+.botoes{
+    width: 90%;
+    height: 60px;
+    display: flex;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    background-color: var(--branco);
+}
+
+.btn{
+    width: 20%;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    margin-left: 4%;
+    border-radius: 10px;
+    background-color: var(--azul);
+}
+
+.digito{
+    font-size: 16px;
+    font-family: 'Press Start 2P';
+    color: var(--branco);
+}
+
+.valoresDisplay{
+    color: #333333;
+    float: right;
+    font-size: 32px;
+    align-self: flex-end;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Press Start 2P';
+}
+
+@media screen and (max-width: 600px){
+    .calculadora{
+        margin-top: 20%;
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .calculadora{
+        margin-top: 20%;
+    }
+}
+
+@media screen and (min-width: 1800px){
+    .calculadora{
+        max-width: 30%;
+    }
+}
