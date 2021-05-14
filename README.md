@@ -2,11 +2,9 @@
 
 <img src="screen.png" alt="tela principal"/>
 
-Calculadora web responsiva com operações básicas. 
+Calculadora web responsiva com operações básicas e tests unitários desenvolvidos com Mocha. 
 
 # Tecnologias
-
-<hr>
 
 * Javascript
 * HTML5
@@ -14,8 +12,6 @@ Calculadora web responsiva com operações básicas.
 * Mocha
 
 # Autor
-
-<hr>
 
 ```
 Fernando Santos De Freitas
