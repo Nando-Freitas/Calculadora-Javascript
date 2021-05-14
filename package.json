@@ -1,0 +1,29 @@
+{
+  "name": "calculadora-javascript",
+  "version": "1.0.0",
+  "description": "<img src=\"screen.png\" alt=\"tela principal\"/>",
+  "main": "index.js",
+  "module": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha -r esm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nando-Freitas/Calculadora-Javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nando-Freitas/Calculadora-Javascript/issues"
+  },
+  "homepage": "https://github.com/Nando-Freitas/Calculadora-Javascript#readme",
+  "devDependencies": {
+    "mocha": "^8.4.0"
+  },
+  "dependencies": {
+    "esm": "^3.2.25"
+  }
+}
