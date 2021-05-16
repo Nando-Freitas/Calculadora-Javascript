@@ -7,5 +7,5 @@ describe('Inicia Calculadora', function(){
     });
     it("Deleta valor inicial do display", function(){
         assert.equal(deletaValorInicial(),"");
-    })
+    });
 });
