@@ -18,9 +18,17 @@ var reinicia = () => {
 
 var constroiOperacao = () =>{
     var operacaoConstruida = [];
+    var aux = "";
     for(let i = 0; i < operacao.length; i++){
-        operacaoConstruida.push(operacao[i]);
+        if(operacao[i] == "+" || operacao[i] == "-" || operacao[i] == "*" || operacao[i] == "/"){
+            operacaoConstruida.push(aux);
+            operacaoConstruida.push(operacao[i]);
+            aux = "";
+        }else{
+            aux = aux + operacao[i];
+        }
     }
+    operacaoConstruida.push(aux);
     return operacaoConstruida;
 }
 
@@ -38,50 +46,29 @@ function pressBtn(button){
         operacao = operacao + button.value;
         document.getElementById("display").innerHTML = "<p class='valoresDisplay'>"+operacao+"</p>";
     }else if(button.value == "="){
-        multiplicaDivide(operacao);
+        realizaOperacao(operacao);
     }else{
         operacao = operacao + button.value;
         document.getElementById("display").innerHTML = "<p class='valoresDisplay'>"+operacao+"</p>"
     }
 }
 
-var multiplicaDivide = (operacao) => {
-    operacao = constroiOperacao(operacao);
-    for(let i = 0; i < operacao.length; i++){
-        if(operacao[i] == "*"){
-            resultado = parseInt(operacao[i-1]) * parseInt(operacao[i+1]);
-            delete operacao[i];
-            delete operacao[i+1];
-            operacao[i-1] = resultado;
-        }else if(operacao[i] == "/"){
-            resultado = parseInt(operacao[i-1]) / parseInt(operacao[i+1]);
-            delete operacao[i];
-            delete operacao[i+1];
-            operacao[i-1] = resultado;
-        }else{
-            continue;
-        }
-    }
-    console.log(operacao);
-}
-
-/*
 var realizaOperacao = (operacao) => {
     operacao = constroiOperacao(operacao);
+    console.log(operacao);
     resultado = parseInt(operacao[0]) + resultado;
     for(let i = 0; i < operacao.length; i++){
-        if(operacao[i] == "*"){
-            resultado = resultado * parseInt(operacao[i+1]);
-        }else if(operacao[i] == "/"){
-            resultado = resultado / parseInt(operacao[i+1]);
-        }else if(operacao[i] == "+"){
+        if(operacao[i] == "+"){
             resultado = resultado + parseInt(operacao[i+1]);
         }else if(operacao[i] == "-"){
             resultado = resultado - parseInt(operacao[i+1]);
+        }else if(operacao[i] == "*"){
+            resultado = resultado * parseInt(operacao[i+1]);
+        }else if(operacao[i] == "/"){
+            resultado = resultado / parseInt(operacao[i+1]);
         }else{
             continue;
         }
     }
     document.getElementById("display").innerHTML = "<p class='valoresDisplay'>"+resultado+"</p>";
 }
-*/
